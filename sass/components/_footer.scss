@@ -1,0 +1,18 @@
+@use '../utils/variables' as var;
+@use './global';
+
+.footer {
+  background-color: var.getColor('background-dark');
+
+  &__container {
+    @include var.flexBox(
+      $direction: row,
+      $justify: null,
+      $align: baseline,
+      $wrap: null,
+      $gap: 70px
+    );
+    padding: 60px 15px;
+    @extend .container;
+  }
+}

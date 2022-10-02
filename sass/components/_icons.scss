@@ -1,0 +1,55 @@
+@use '../utils/variables' as var;
+
+.icon-container {
+  @include var.flexBox($direction: row, $justify: center, $align: null, $wrap: null, $gap: 10px);
+}
+
+.icon {
+  @include var.transitionStyle((fill, background-color, border, transform));
+}
+
+.social-icon {
+  @extend .icon;
+  fill: var.getColor('fill-icon-primary');
+  border-radius: 50%;
+
+  &--dark {
+    @extend .social-icon;
+    fill: var.getColor('fill-icon-secondary');
+    background-color: var.getColor('background-icon-dark');
+  }
+
+  &:hover {
+    fill: var.getColor('fill-icon-secondary');
+    background-color: var.getColor('brand');
+  }
+}
+
+.link:focus .social-icon {
+  fill: var.getColor('fill-icon-secondary');
+  background-color: var.getColor('brand');
+}
+
+.social-icons__heading {
+  @include var.fontStyle($size: 14px, $height: 1.143, $spacing: 0.03em, $weight: 700, $style: null);
+  text-transform: uppercase;
+  color: var.getColor('text-footer-primary');
+  margin-bottom: 20px;
+}
+
+.client-icon {
+  @extend .icon;
+  fill: var.getColor('fill-icon-primary');
+  border: 1px solid var.getColor('fill-icon-primary');
+  border-radius: 4px;
+
+  &:hover {
+    fill: var.getColor('brand');
+    border: 1px solid var.getColor('brand');
+  }
+}
+
+.link:focus .client-icon {
+  fill: var.getColor('brand');
+  border: 1px solid var.getColor('brand');
+}

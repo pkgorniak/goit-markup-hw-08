@@ -1,0 +1,36 @@
+@use '../utils/variables' as var;
+@use './global';
+
+.banner {
+  background-color: var.getColor('background-dark');
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__container {
+    padding: 200px 0;
+    @include var.flexBox(
+      $direction: column,
+      $justify: null,
+      $align: center,
+      $wrap: null,
+      $gap: null
+    );
+    @extend .container;
+  }
+
+  &__heading {
+    @include var.fontStyle(
+      $size: 44px,
+      $height: 1.364,
+      $spacing: 0.06em,
+      $weight: 900,
+      $style: null
+    );
+    color: var.getColor('text-banner');
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+}

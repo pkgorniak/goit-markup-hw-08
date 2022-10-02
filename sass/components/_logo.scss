@@ -1,0 +1,27 @@
+@use '../utils/variables' as var;
+
+.logo {
+  font-family: var.$logo-font-family;
+  @include var.fontStyle(
+    $size: 26px,
+    $height: 1.192,
+    $spacing: 0.03em,
+    $weight: 700,
+    $style: normal
+  );
+  text-decoration: none;
+
+  &__accent {
+    color: var.getColor('brand');
+  }
+
+  &--dark {
+    @extend .logo;
+    color: var.getColor('logo-dark');
+  }
+
+  &--light {
+    @extend .logo;
+    color: var.getColor('logo-light');
+  }
+}

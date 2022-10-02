@@ -1,0 +1,36 @@
+@use '../utils/variables' as var;
+@use './global';
+@use './icons';
+
+.contacts {
+  @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: null, $gap: null);
+  list-style-type: none;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__icon {
+    @extend .icon;
+    margin-right: 10px;
+    fill: var.getColor('text-secondary');
+  }
+
+  &__link {
+    @extend .link;
+    @include var.flexBox($direction: row, $justify: null, $align: center, $wrap: null, $gap: null);
+    @include var.fontStyle(
+      $size: 14px,
+      $height: 1.143,
+      $spacing: 0.02em,
+      $weight: 500,
+      $style: normal
+    );
+    color: var.getColor('text-secondary');
+
+    &:hover .contacts__icon,
+    &:focus .contacts__icon {
+      fill: var.getColor('text-link-hover');
+    }
+  }
+}

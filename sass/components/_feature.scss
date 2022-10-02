@@ -1,0 +1,40 @@
+@use '../utils/variables' as var;
+
+.feature {
+  @include var.flexBox(
+    $direction: column,
+    $justify: null,
+    $align: flex-start,
+    $wrap: null,
+    $gap: null
+  );
+
+  &__icon {
+    background-color: var.getColor('background-light');
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  &__heading {
+    @include var.fontStyle(
+      $size: 14px,
+      $height: 1.143,
+      $spacing: 0.03em,
+      $weight: 700,
+      $style: null
+    );
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include var.fontStyle(
+      $size: 14px,
+      $height: 1.714,
+      $spacing: 0.03em,
+      $weight: 400,
+      $style: null
+    );
+    color: var.getColor('text-secondary');
+  }
+}

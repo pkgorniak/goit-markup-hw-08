@@ -1,0 +1,40 @@
+@use '../utils/variables' as var;
+
+.team {
+  @include var.flexBox($direction: column, $justify: null, $align: center, $wrap: null, $gap: null);
+  background-color: var.getColor('background-card');
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  padding: 0 0 30px 0;
+
+  &__image {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__heading {
+    @include var.fontStyle(
+      $size: 16px,
+      $height: 1.188,
+      $spacing: 0.03em,
+      $weight: 500,
+      $style: null
+    );
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include var.fontStyle(
+      $size: 16px,
+      $height: 1.188,
+      $spacing: 0.03em,
+      $weight: 400,
+      $style: null
+    );
+    color: var.getColor('text-secondary');
+    margin-bottom: 16px;
+  }
+}

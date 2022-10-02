@@ -1,0 +1,11 @@
+@use '../utils/variables' as var;
+
+.filter {
+  list-style-type: none;
+  @include var.flexBox($direction: row, $justify: center, $align: null, $wrap: wrap, $gap: null);
+  margin-bottom: 50px;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}

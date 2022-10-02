@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Page header -->
+    <header class="header">
+      <div class="header__container">
+        <!-- Logo is always a link -->
+        <a class="logo--dark header__logo" href="./index.html">
+          <span class="logo__accent"> Web</span>Studio
+        </a>
+        <!-- Main navigation -->
+        <nav class="navigation">
+          <div class="navigation__container">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="./index.html"> Agencja </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link--active" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Contact links -->
+        <ul class="contacts">
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:info@devstudio.com">
+              <svg class="contacts__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+48111111111">
+              <svg class="contacts__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +48 111 111 111
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Page content -->
+    <main>
+      <!-- Portfolio section -->
+      <section class="section">
+        <div class="section__container">
+          <!-- Portfolio filter-->
+          <ul class="filter">
+            <li class="filter__item">
+              <button class="button--secondary" type="button">Wszystkie</button>
+            </li>
+            <li class="filter__item">
+              <button class="button--secondary" type="button">Strony</button>
+            </li>
+            <li class="filter__item">
+              <button class="button--secondary" type="button">Aplikacje</button>
+            </li>
+            <li class="filter__item">
+              <button class="button--secondary" type="button">Dizajn</button>
+            </li>
+            <li class="filter__item">
+              <button class="button--secondary" type="button">Marketing</button>
+            </li>
+          </ul>
+          <!-- Projects -->
+          <ul class="grid">
+            <li class="grid__item--col-3">
+              <a class="link" href="#">
+                <article class="project">
+                  <div class="project__overlay-container">
+                    <img class="project__image" src="images/portfolio-img1.jpg" alt="Technocrack" />
+                    <div class="project__overlay">
+                      Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
+                      koronawirusa. Firmy wykorzystują tę platformę do celów szpiegowskich i ataków
+                      na niezabezpieczone serwery konkurencji
+                    </div>
+                  </div>
+                  <div class="project__text-container">
+                    <h3 class="project__heading">Technocrack</h3>
+                    <p class="project__text">Strona internetowa</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li class="grid__item--col-3">
+              <a class="link" href="#">
+                <article class="project">
+                  <div class="project__overlay-container">
+                    <img
+                      class="project__image"
+                      src="images/portfolio-img2.jpg"
+                      alt="Grafika New Orlean vs Golden Star"
+                    />
+                    <div class="project__overlay">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste eligendi
+                      nesciunt beatae accusamus at nostrum, eos odit harum id quo assumenda ipsam
+                      molestiae repudiandae natus dolor, sit quisquam iure?
+                    </div>
+                  </div>
+                  <div class="project__text-container">
+                    <h3 class="project__heading">Grafika New Orlean vs Golden Star</h3>
+                    <p class="project__text">Dizajn</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li class="grid__item--col-3">
+              <a class="link" href="#">
+                <article class="project">
+                  <div class="project__overlay-container">
+                    <img
+                      class="project__image"
+                      src="images/portfolio-img3.jpg"
+                      alt="Restauracja Seafood"
+                    />
+                    <div class="project__overlay">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste eligendi
+                      nesciunt beatae accusamus at nostrum, eos odit harum id quo assumenda ipsam
+                      molestiae repudiandae natus dolor, sit quisquam iure?
+                    </div>
+                  </div>
+                  <div class="project__text-container">
+                    <h3 class="project__heading">Restauracja Seafood</h3>
+                    <p class="project__text">Aplikacja</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li class="grid__item--col-3">
+              <a class="link" href="#">
+                <article class="project">
+                  <div class="project__overlay-container">
+                    <img
+                      class="project__image"
+                      src="images/portfolio-img4.jpg"
+                      alt="Projekt Prime"
+                    />
+                    <div class="project__overlay">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste eligendi
+                      nesciunt beatae accusamus at nostrum, eos odit harum id quo assumenda ipsam
+                      molestiae repudiandae natus dolor, sit quisquam iure?
+                    </div>
+                  </div>
+                  <div class="project__text-container">
+                    <h3 class="project__heading">Projekt Prime</h3>
+                    <p class="project__text">Marketing</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li class="grid__item--col-3">
+              <a class="link" href="#">
+                <article class="project">
+                  <div class="project__overlay-container">
+                    <img
+                      class="project__image"
+                      src="images/portfolio-img5.jpg"
+                      alt="Projekt Boxes"
+                    />
+                    <div class="project__overlay">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste eligendi
+                      nesciunt beatae accusamus at nostrum, eos odit harum id quo assumenda ipsam
+                      molestiae repudiandae natus dolor, sit quisquam iure?
+                    </div>
+                  </div>
+                  <div class="project__text-container">
+                    <h3 class="project__heading">Projekt Boxes</h3>
+                    <p class="project__text">Aplikacja</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li class="grid__item--col-3">
+              <a class="link" href="#">
+                <article class="project">
+                  <div class="project__overlay-container">
+                    <img
+                      class="project__image"
+                      src="images/portfolio-img6.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                    <div class="project__overlay">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste eligendi
+                      nesciunt beatae accusamus at nostrum, eos odit harum id quo assumenda ipsam
+                      molestiae repudiandae natus dolor, sit quisquam iure?
+                    </div>
+                  </div>
+                  <div class="project__text-container">
+                    <h3 class="project__heading">Inspiration has no Borders</h3>
+                    <p class="project__text">Strona internetowa</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li class="grid__item--col-3">
+              <a class="link" href="#">
+                <article class="project">
+                  <div class="project__overlay-container">
+                    <img
+                      class="project__image"
+                      src="images/portfolio-img7.jpg"
+                      alt="Magazyn Limited Edition"
+                    />
+                    <div class="project__overlay">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste eligendi
+                      nesciunt beatae accusamus at nostrum, eos odit harum id quo assumenda ipsam
+                      molestiae repudiandae natus dolor, sit quisquam iure?
+                    </div>
+                  </div>
+                  <div class="project__text-container">
+                    <h3 class="project__heading">Magazyn Limited Edition</h3>
+                    <p class="project__text">Dizajn</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li class="grid__item--col-3">
+              <a class="link" href="#">
+                <article class="project">
+                  <div class="project__overlay-container">
+                    <img class="project__image" src="images/portfolio-img8.jpg" alt="Projekt LAB" />
+                    <div class="project__overlay">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste eligendi
+                      nesciunt beatae accusamus at nostrum, eos odit harum id quo assumenda ipsam
+                      molestiae repudiandae natus dolor, sit quisquam iure?
+                    </div>
+                  </div>
+                  <div class="project__text-container">
+                    <h3 class="project__heading">Projekt LAB</h3>
+                    <p class="project__text">Marketing</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li class="grid__item--col-3">
+              <a class="link" href="#">
+                <article class="project">
+                  <div class="project__overlay-container">
+                    <img
+                      class="project__image"
+                      src="images/portfolio-img9.jpg"
+                      alt="Growing Business"
+                    />
+                    <div class="project__overlay">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste eligendi
+                      nesciunt beatae accusamus at nostrum, eos odit harum id quo assumenda ipsam
+                      molestiae repudiandae natus dolor, sit quisquam iure?
+                    </div>
+                  </div>
+                  <div class="project__text-container">
+                    <h3 class="project__heading">Growing Business</h3>
+                    <p class="project__text">Aplikacja</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- Page footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__address">
+          <!-- Logo is always a link -->
+          <a class="logo--light" href="./index.html">
+            <span class="logo__accent"> Web</span>Studio
+          </a>
+          <!-- Address -->
+          <address class="address">
+            <p class="address__text">m. Warszawa, Aleje Jerozolimskie 21</p>
+            <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <a class="address__link" href="tel:+48111111111">+48 111 111 111</a>
+          </address>
+        </div>
+        <!-- Social links -->
+        <div class="social-icons">
+          <h3 class="social-icons__heading">Dołącz do nas</h3>
+          <div class="icon-container">
+            <a class="link" href="#">
+              <svg class="social-icon--dark" width="44" height="44">
+                <use
+                  href="./images/icons.svg#icon-instagram"
+                  width="20"
+                  height="20"
+                  x="12"
+                  y="12"
+                ></use>
+              </svg>
+            </a>
+            <a class="link" href="#">
+              <svg class="social-icon--dark" width="44" height="44">
+                <use
+                  href="./images/icons.svg#icon-twitter"
+                  width="20"
+                  height="20"
+                  x="12"
+                  y="12"
+                ></use>
+              </svg>
+            </a>
+            <a class="link" href="#">
+              <svg class="social-icon--dark" width="44" height="44">
+                <use
+                  href="./images/icons.svg#icon-facebook"
+                  width="20"
+                  height="20"
+                  x="12"
+                  y="12"
+                ></use>
+              </svg>
+            </a>
+            <a class="link" href="#">
+              <svg class="social-icon--dark" width="44" height="44">
+                <use
+                  href="./images/icons.svg#icon-linkedin"
+                  width="20"
+                  height="20"
+                  x="12"
+                  y="12"
+                ></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Newsletter form -->
+        <form class="newsletter-form" name="newsletter_form">
+          <label class="newsletter-form__heading" for="user_email">Zapisz się do newslettera</label>
+          <input
+            class="newsletter-form__input"
+            type="email"
+            name="email"
+            id="user_email"
+            placeholder="E-mail"
+          />
+          <button class="button--primary" type="submit">
+            Zapisz się
+            <svg class="button__icon--end" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>

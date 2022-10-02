@@ -1,0 +1,60 @@
+@use '../utils/variables' as var;
+
+.checkbox {
+  position: relative;
+  @include var.flexBox($direction: row, $justify: center, $align: center, $wrap: null, $gap: null);
+  margin-bottom: 30px;
+
+  &__label {
+    @include var.fontStyle(
+      $size: 14px,
+      $height: 1.714,
+      $spacing: 0.03em,
+      $weight: 400,
+      $style: null
+    );
+    color: var.getColor('text-secondary');
+  }
+
+  &__input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    cursor: pointer;
+    background-color: var.getColor('background-modal');
+    border: 2px solid var.getColor('text-primary');
+    border-radius: 2px;
+    z-index: 3;
+    @include var.transitionStyle((background-color, border));
+
+    &:checked {
+      background-color: var.getColor('brand');
+      border: 0;
+      z-index: 1;
+      @include var.transitionStyle((background-color, border));
+    }
+  }
+
+  &__icon {
+    fill: var.getColor('background-modal');
+    position: absolute;
+    left: 14px;
+    top: 4px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__link {
+    color: var.getColor('text-link-accent');
+    @include var.transitionStyle((font-weight, text-decoration));
+
+    &:hover,
+    &:focus {
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@use '../utils/variables' as var;
+@use './icons';
+
+.order-form {
+  @include var.flexBox($direction: column, $justify: null, $align: null, $wrap: null, $gap: null);
+
+  &__heading {
+    @include var.fontStyle(
+      $size: 20px,
+      $height: 1.15,
+      $spacing: 0.03em,
+      $weight: 700,
+      $style: null
+    );
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    position: relative;
+    @include var.flexBox($direction: column, $justify: null, $align: null, $wrap: null, $gap: null);
+    @include var.fontStyle(
+      $size: 12px,
+      $height: 1.167,
+      $spacing: 0.01em,
+      $weight: 400,
+      $style: null
+    );
+    color: var.getColor('text-secondary');
+  }
+
+  &__input {
+    padding: 12px 12px 12px 42px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+
+  &__textarea {
+    resize: none;
+    height: 120px;
+    padding: 12px 16px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+
+  &__input,
+  &__textarea {
+    @include var.fontStyle(
+      $size: 12px,
+      $height: 1.167,
+      $spacing: 0.01em,
+      $weight: 400,
+      $style: null
+    );
+    color: var.getColor('text-primary');
+    background: transparent;
+    border: 1px solid var.getColor('border-primary');
+    border-radius: 4px;
+    @include var.transitionStyle(border);
+
+    &:focus {
+      border: 1px solid var.getColor('brand');
+    }
+  }
+
+  &__input:focus + .order-form__icon {
+    fill: var.getColor('brand');
+  }
+
+  &__icon {
+    @extend .icon;
+    position: absolute;
+    top: 30px;
+    left: 12px;
+    fill: var.getColor('text-primary');
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

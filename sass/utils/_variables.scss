@@ -1,0 +1,65 @@
+$colors: (
+  'brand': rgba(33, 150, 243, 1),
+  'logo-dark': rgba(0, 0, 0, 1),
+  'logo-light': rgba(255, 255, 255, 1),
+  'text-primary': rgba(33, 33, 33, 1),
+  'text-secondary': rgba(117, 117, 117, 1),
+  'text-link-hover': rgba(33, 150, 243, 1),
+  'text-link-accent': rgba(33, 150, 243, 1),
+  'text-banner': rgba(255, 255, 255, 1),
+  'text-button-primary': rgba(255, 255, 255, 1),
+  'text-button-secondary': rgba(33, 33, 33, 1),
+  'text-footer-primary': rgba(255, 255, 255, 1),
+  'text-footer-secondary': rgba(255, 255, 255, 0.6),
+  'text-services': rgba(255, 255, 255, 1),
+  'text-overlay': rgba(255, 255, 255, 1),
+  'background-light': rgba(245, 244, 250, 1),
+  'background-dark': rgba(47, 48, 58, 1),
+  'background-button-primary': rgba(33, 150, 243, 1),
+  'background-button-secondary': rgba(245, 244, 250, 1),
+  'background-services': rgba(47, 48, 58, 0.8),
+  'background-card': rgba(255, 255, 255, 1),
+  'background-icon-dark': rgba(255, 255, 255, 0.1),
+  'background-overlay': rgba(33, 150, 243, 0.9),
+  'background-modal': rgba(255, 255, 255, 1),
+  'fill-icon-primary': rgba(175, 177, 184, 1),
+  'fill-icon-secondary': rgba(255, 255, 255, 1),
+  'fill-icon-close': rgba(33, 33, 33, 1),
+  'border-header': rgba(236, 236, 236, 1),
+  'border-primary': rgba(33, 33, 33, 0.2),
+  'border-projects': rgb(238, 238, 238, 1),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+$main-font-family: 'Roboto', sans-serif;
+$logo-font-family: 'Raleway', sans-serif;
+
+@mixin fontStyle($size, $height, $spacing, $weight, $style: null) {
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin flexBox($direction: row, $justify: null, $align: null, $wrap: null, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin flexBasis($colQty) {
+  flex-basis: calc((100% - 30px * (#{$colQty} - 1)) / #{$colQty});
+}
+
+@mixin transitionStyle($properties, $duration: 250ms, $function: cubic-bezier(0.4, 0, 0.2, 1)) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-timing-function: $function;
+}

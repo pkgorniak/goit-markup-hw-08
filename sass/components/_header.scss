@@ -1,0 +1,16 @@
+@use '../utils/variables' as var;
+@use './global';
+
+.header {
+  border-bottom: 1px solid var.getColor('border-header');
+
+  &__container {
+    @include var.flexBox($direction: row, $justify: null, $align: center, $wrap: null, $gap: null);
+    padding: 24px 27px 25px 15px;
+    @extend .container;
+  }
+
+  &__logo {
+    margin-right: 93px;
+  }
+}
