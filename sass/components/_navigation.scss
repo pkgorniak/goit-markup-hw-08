@@ -3,6 +3,7 @@
 
 .navigation {
   flex-grow: 1;
+  display: none;
 
   &__list {
     list-style-type: none;
@@ -37,5 +38,11 @@
         top: 31px;
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
   }
 }

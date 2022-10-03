@@ -5,12 +5,38 @@
   border-bottom: 1px solid var.getColor('border-header');
 
   &__container {
-    @include var.flexBox($direction: row, $justify: null, $align: center, $wrap: null, $gap: null);
-    padding: 24px 27px 25px 15px;
+    @include var.flexBox(
+      $direction: row,
+      $justify: space-between,
+      $align: center,
+      $wrap: null,
+      $gap: null
+    );
+    padding: 10px 15px;
     @extend .container;
   }
+}
 
-  &__logo {
-    margin-right: 93px;
+@media (min-width: 768px) {
+  .header {
+    &__container {
+      padding: 19px 15px;
+    }
+
+    &__logo {
+      margin-right: 83px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+ .header {
+    &__container {
+      padding: 24px 27px 25px 15px;
+    }
+
+    &__logo {
+      margin-right: 93px;
+    }
   }
 }

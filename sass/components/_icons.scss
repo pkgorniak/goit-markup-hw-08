@@ -32,24 +32,14 @@
 
 .social-icons__heading {
   @include var.fontStyle($size: 14px, $height: 1.143, $spacing: 0.03em, $weight: 700, $style: null);
+  text-align: center;
   text-transform: uppercase;
   color: var.getColor('text-footer-primary');
   margin-bottom: 20px;
 }
 
-.client-icon {
-  @extend .icon;
-  fill: var.getColor('fill-icon-primary');
-  border: 1px solid var.getColor('fill-icon-primary');
-  border-radius: 4px;
-
-  &:hover {
-    fill: var.getColor('brand');
-    border: 1px solid var.getColor('brand');
+@media (min-width: 1200px) {
+  .social-icons__heading {
+    text-align: left;
   }
-}
-
-.link:focus .client-icon {
-  fill: var.getColor('brand');
-  border: 1px solid var.getColor('brand');
 }

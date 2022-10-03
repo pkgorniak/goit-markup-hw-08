@@ -3,12 +3,8 @@
 @use './icons';
 
 .contacts {
-  @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: null, $gap: null);
+  display: none;
   list-style-type: none;
-
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
 
   &__icon {
     @extend .icon;
@@ -31,6 +27,27 @@
     &:hover .contacts__icon,
     &:focus .contacts__icon {
       fill: var.getColor('text-link-hover');
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    @include var.flexBox($direction: column, $justify: null, $align: null, $wrap: null, $gap: null);
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts {
+    @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: null, $gap: null);
+
+    &__item:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 30px;
     }
   }
 }

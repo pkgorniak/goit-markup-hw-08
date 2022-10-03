@@ -2,10 +2,10 @@
 @use './global';
 
 .section {
-  padding: 94px 0px;
+  padding: 60px 0px;
 
   &:nth-of-type(2) {
-    padding-top: 0;
+    display: none;
   }
 
   &--light-gray {
@@ -20,13 +20,30 @@
 
   &__heading {
     @include var.fontStyle(
-      $size: 36px,
-      $height: 1.166,
+      $size: 28px,
+      $height: 1.179,
       $spacing: 0.03em,
       $weight: 700,
       $style: null
     );
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding: 94px 0px;
+
+    &:nth-of-type(2) {
+      display: flex;
+      padding-top: 0;
+    }
+
+    &__heading {
+      font-size: 36px;
+      line-height: 1.166;
+      margin-bottom: 50px;
+    }
   }
 }

@@ -1,18 +1,25 @@
 @use '../utils/variables' as var;
 
 .feature {
-  @include var.flexBox(
-    $direction: column,
-    $justify: null,
-    $align: flex-start,
-    $wrap: null,
-    $gap: null
-  );
+  @include var.flexBox($direction: column, $justify: null, $align: null, $wrap: null, $gap: null);
 
-  &__icon {
+  &__icon-box {
+    @include var.flexBox(
+      $direction: row,
+      $justify: center,
+      $align: center,
+      $wrap: null,
+      $gap: null
+    );
+    padding: 25px 0;
     background-color: var.getColor('background-light');
     border-radius: 4px;
     margin-bottom: 30px;
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
   }
 
   &__heading {

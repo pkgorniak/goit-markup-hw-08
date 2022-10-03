@@ -7,8 +7,8 @@
 
   &__label {
     @include var.fontStyle(
-      $size: 14px,
-      $height: 1.714,
+      $size: 12px,
+      $height: 1.167,
       $spacing: 0.03em,
       $weight: 400,
       $style: null
@@ -20,6 +20,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    flex-shrink: 0;
     width: 16px;
     height: 15px;
     margin-right: 8px;
@@ -41,8 +42,8 @@
   &__icon {
     fill: var.getColor('background-modal');
     position: absolute;
-    left: 14px;
-    top: 4px;
+    left: 0px;
+    top: 6px;
     z-index: 2;
     cursor: pointer;
   }
@@ -55,6 +56,29 @@
     &:focus {
       font-weight: 700;
       text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .checkbox {
+    &__icon {
+      left: 3px;
+      top: 0px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .checkbox {
+    &__label {
+      font-size: 14px;
+      line-height: 1.714;
+    }
+
+    &__icon {
+      left: 14px;
+      top: 4px;
     }
   }
 }

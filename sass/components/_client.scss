@@ -1,0 +1,33 @@
+@use '../utils/variables' as var;
+@use './icons';
+
+.client {
+  @include var.flexBox($direction: row, $justify: center, $align: center, $wrap: null, $gap: null);
+  border: 1px solid var.getColor('fill-icon-primary');
+  border-radius: 4px;
+  padding: 13px 0;
+  @include var.transitionStyle(border);
+
+  &__icon {
+    @extend .icon;
+    width: 106px;
+    height: 64px;
+    fill: var.getColor('fill-icon-primary');
+  }
+
+  &:hover {
+    border: 1px solid var.getColor('brand');
+
+    & .client__icon {
+      fill: var.getColor('brand');
+    }
+  }
+}
+
+.link:focus .client__icon {
+  fill: var.getColor('brand');
+}
+
+.link:focus .client {
+  border: 1px solid var.getColor('brand');
+}

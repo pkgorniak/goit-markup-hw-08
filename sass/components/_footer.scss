@@ -6,13 +6,81 @@
 
   &__container {
     @include var.flexBox(
-      $direction: row,
+      $direction: column,
       $justify: null,
-      $align: baseline,
+      $align: center,
       $wrap: null,
-      $gap: 70px
+      $gap: 60px
     );
     padding: 60px 15px;
     @extend .container;
+  }
+
+  &__tablet-container {
+    @include var.flexBox(
+      $direction: column,
+      $justify: null,
+      $align: center,
+      $wrap: null,
+      $gap: 60px
+    );
+  }
+
+  &__address {
+    @include var.flexBox(
+      $direction: column,
+      $justify: null,
+      $align: center,
+      $wrap: null,
+      $gap: null
+    );
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    &__tablet-container {
+      @include var.flexBox(
+        $direction: row,
+        $justify: null,
+        $align: baseline,
+        $wrap: null,
+        $gap: 144px
+      );
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    &__container {
+      @include var.flexBox(
+        $direction: row,
+        $justify: null,
+        $align: baseline,
+        $wrap: null,
+        $gap: 70px
+      );
+    }
+
+    &__tablet-container {
+      @include var.flexBox(
+        $direction: row,
+        $justify: null,
+        $align: baseline,
+        $wrap: null,
+        $gap: 70px
+      );
+    }
+
+    &__address {
+      @include var.flexBox(
+        $direction: column,
+        $justify: null,
+        $align: flex-start,
+        $wrap: null,
+        $gap: null
+      );
+    }
   }
 }

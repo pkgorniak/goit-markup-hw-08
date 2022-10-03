@@ -4,22 +4,63 @@
   list-style-type: none;
   @include var.flexBox($direction: row, $justify: center, $align: null, $wrap: wrap, $gap: 30px);
 
-  &__item {
-    flex-basis: 100%;
+  &__item-feature {
+    @include var.flexBasis(1);
+  }
 
-    &--col-3 {
-      @extend .grid__item;
+  &__item-service {
+    @include var.flexBasis(3);
+  }
+
+  &__item-team {
+    @include var.flexBasis(1);
+  }
+
+  &__item-client {
+    @include var.flexBasis(2);
+  }
+
+  &__item-project {
+    @include var.flexBasis(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    &__item-feature {
+      @include var.flexBasis(2);
+    }
+
+    &__item-team {
+      @include var.flexBasis(2);
+    }
+
+    &__item-client {
       @include var.flexBasis(3);
     }
 
-    &--col-4 {
-      @extend .grid__item;
+    &__item-project {
+      @include var.flexBasis(2);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    &__item-feature {
       @include var.flexBasis(4);
     }
 
-    &--col-6 {
-      @extend .grid__item;
+    &__item-team {
+      @include var.flexBasis(4);
+    }
+
+    &__item-client {
       @include var.flexBasis(6);
+    }
+
+    &__item-project {
+      @include var.flexBasis(3);
     }
   }
 }

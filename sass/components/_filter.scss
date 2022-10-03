@@ -2,10 +2,12 @@
 
 .filter {
   list-style-type: none;
-  @include var.flexBox($direction: row, $justify: center, $align: null, $wrap: wrap, $gap: null);
+  @include var.flexBox($direction: row, $justify: flex-start, $align: null, $wrap: wrap, $gap: 8px);
   margin-bottom: 50px;
+}
 
-  &__item:not(:last-child) {
-    margin-right: 8px;
+@media (min-width: 768px) {
+  .filter {
+    @include var.flexBox($direction: row, $justify: center, $align: null, $wrap: wrap, $gap: 8px);
   }
 }

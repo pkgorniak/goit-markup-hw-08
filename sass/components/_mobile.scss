@@ -1,0 +1,150 @@
+@use '../utils/variables' as var;
+@use './global';
+@use './icons';
+
+.menu-toggle {
+  @include var.flexBox($direction: row, $justify: center, $align: center, $wrap: null, $gap: null);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__icon {
+    @extend .icon;
+    fill: var.getColor('text-primary');
+
+    &:hover {
+      fill: var.getColor('brand');
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-container {
+  @include var.flexBox($direction: column, $justify: null, $align: null, $wrap: null, $gap: null);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
+  background-color: var.getColor('background-modal');
+  z-index: 999;
+  transform: translateX(100%);
+  @include var.transitionStyle(transform, 500ms, ease-in-out);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  & .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+.mobile-navigation {
+  flex-grow: 1;
+
+  &__list {
+    list-style-type: none;
+    @include var.flexBox($direction: column, $justify: null, $align: null, $wrap: null, $gap: null);
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    @extend .link;
+    @include var.fontStyle(40px, 1.175, 0.02em, 500);
+    color: var.getColor('text-primary');
+
+    &--active {
+      @extend .mobile-navigation__link;
+      color: var.getColor('text-link-accent');
+    }
+  }
+}
+
+.mobile-contacts {
+  @include var.flexBox($direction: column, $justify: null, $align: null, $wrap: null, $gap: null);
+  padding: 64px 0;
+  list-style-type: none;
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__phone {
+    @extend .link;
+    @include var.fontStyle(34px, 1.176, 0.02em, 500);
+    color: var.getColor('text-link-accent');
+
+    &:hover,
+    &:focus {
+      color: var.getColor('text-secondary');
+    }
+  }
+
+  &__mail {
+    @extend .link;
+    @include var.fontStyle(24px, 1.167, 0.02em, 500);
+    color: var.getColor('text-secondary');
+  }
+}
+
+@media (max-width: 350px) {
+  .mobile-contacts__phone {
+    @include var.fontStyle(24px, 1.167, 0.02em, 500);
+  }
+}
+
+.mobile-social {
+  @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: wnull, $gap: null);
+  list-style-type: none;
+
+  &__item:not(:first-child) {
+    padding-left: 10px;
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid var.getColor('text-secondary');
+  }
+
+  &__link {
+    @extend .link;
+    @include var.fontStyle(18px, 1.222, 0.02em, 500);
+    color: var.getColor('text-link-accent');
+
+    &:hover,
+    &:focus {
+      color: var.getColor('text-secondary');
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .mobile-social {
+    @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: wrap, $gap: 10px);
+
+    &__item :nth-child(2n-1) {
+      flex-basis: auto;
+    }
+
+    &__item:not(:first-child) {
+      padding-left: 0;
+    }
+
+    &__item:nth-child(2n) {
+      flex-basis: 50%;
+      border: none;
+    }
+  }
+}

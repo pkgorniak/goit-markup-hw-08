@@ -11,7 +11,7 @@
 
   &__overlay {
     @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: null, $gap: null);
-    padding: 49px 45px 49px 24px;
+    padding: 20px;
     position: absolute;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@
     height: 100%;
     background: var.getColor('background-overlay');
     @include var.fontStyle(
-      $size: 18px,
+      $size: 16px,
       $height: 1.556,
       $spacing: 0.03em,
       $weight: 400,
@@ -42,14 +42,14 @@
   }
 
   &__heading {
-    @include var.fontStyle($size: 18px, $height: 2, $spacing: 0.06em, $weight: 700, $style: null);
+    @include var.fontStyle($size: 16px, $height: 2, $spacing: 0.06em, $weight: 700, $style: null);
     color: var.getColor('text-primary');
     margin-bottom: 4px;
   }
 
   &__text {
     @include var.fontStyle(
-      $size: 16px,
+      $size: 14px,
       $height: 1.875,
       $spacing: 0.03em,
       $weight: 400,
@@ -68,4 +68,25 @@
 .project:hover .project__overlay,
 .link:focus .project .project__overlay {
   transform: translateY(0);
+}
+
+@media (min-width: 400px) {
+  .project {
+    &__overlay {
+      padding: 49px 24px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .project {
+    &__heading {
+      font-size: 18px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
 }

@@ -7,9 +7,10 @@
     url(../images/background.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: auto 100%;
 
   &__container {
-    padding: 200px 0;
+    padding: 118px 0;
     @include var.flexBox(
       $direction: column,
       $justify: null,
@@ -22,8 +23,8 @@
 
   &__heading {
     @include var.fontStyle(
-      $size: 44px,
-      $height: 1.364,
+      $size: 20px,
+      $height: 1.615,
       $spacing: 0.06em,
       $weight: 900,
       $style: null
@@ -32,5 +33,27 @@
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 400px) {
+  .banner {
+    &__heading {
+      font-size: 26px;
+      line-height: 1.615;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner {
+    &__container {
+      padding: 200px 0;
+    }
+
+    &__heading {
+      font-size: 44px;
+      line-height: 1.364;
+    }
   }
 }
