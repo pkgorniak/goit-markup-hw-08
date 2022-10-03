@@ -60,9 +60,18 @@
             </a>
           </li>
         </ul>
-
-
-        
+        <!-- Mobile menu button -->
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle__icon" width="40" height="40">
+            <use
+              href="./images/icons.svg#icon-mobile-menu"
+              width="24"
+              height="16"
+              x="8"
+              y="12"
+            ></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Page content -->
@@ -81,17 +90,13 @@
       <section class="section">
         <div class="section__container">
           <ul class="grid">
-            <li class="grid__item--col-4">
+            <li class="grid__item-feature">
               <article class="feature">
-                <svg class="feature__icon" width="270" height="120">
-                  <use
-                    href="./images/icons.svg#icon-antenna"
-                    width="70"
-                    height="70"
-                    x="100"
-                    y="25"
-                  ></use>
-                </svg>
+                <div class="feature__icon-box">
+                  <svg class="feature__icon">
+                    <use href="./images/icons.svg#icon-antenna"></use>
+                  </svg>
+                </div>
                 <h3 class="feature__heading">Lorem ipsum</h3>
                 <p class="feature__text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non
@@ -99,17 +104,13 @@
                 </p>
               </article>
             </li>
-            <li class="grid__item--col-4">
+            <li class="grid__item-feature">
               <article class="feature">
-                <svg class="feature__icon" width="270" height="120">
-                  <use
-                    href="./images/icons.svg#icon-clock"
-                    width="70"
-                    height="70"
-                    x="100"
-                    y="25"
-                  ></use>
-                </svg>
+                <div class="feature__icon-box">
+                  <svg class="feature__icon">
+                    <use href="./images/icons.svg#icon-clock"></use>
+                  </svg>
+                </div>
                 <h3 class="feature__heading">Lorem ipsum</h3>
                 <p class="feature__text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non
@@ -117,17 +118,13 @@
                 </p>
               </article>
             </li>
-            <li class="grid__item--col-4">
+            <li class="grid__item-feature">
               <article class="feature">
-                <svg class="feature__icon" width="270" height="120">
-                  <use
-                    href="./images/icons.svg#icon-diagram"
-                    width="70"
-                    height="70"
-                    x="100"
-                    y="25"
-                  ></use>
-                </svg>
+                <div class="feature__icon-box">
+                  <svg class="feature__icon">
+                    <use href="./images/icons.svg#icon-diagram"></use>
+                  </svg>
+                </div>
                 <h3 class="feature__heading">Lorem ipsum</h3>
                 <p class="feature__text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non
@@ -135,17 +132,13 @@
                 </p>
               </article>
             </li>
-            <li class="grid__item--col-4">
+            <li class="grid__item-feature">
               <article class="feature">
-                <svg class="feature__icon" width="270" height="120">
-                  <use
-                    href="./images/icons.svg#icon-astronaut"
-                    width="70"
-                    height="70"
-                    x="100"
-                    y="25"
-                  ></use>
-                </svg>
+                <div class="feature__icon-box">
+                  <svg class="feature__icon">
+                    <use href="./images/icons.svg#icon-astronaut"></use>
+                  </svg>
+                </div>
                 <h3 class="feature__heading">Lorem ipsum</h3>
                 <p class="feature__text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non
@@ -161,7 +154,7 @@
         <div class="section__container">
           <h2 class="section__heading">Czym się zajmujemy</h2>
           <ul class="grid">
-            <li class="grid__item--col-3">
+            <li class="grid__item-service">
               <figure class="service">
                 <img
                   class="service__image"
@@ -171,7 +164,7 @@
                 <figcaption class="service__heading">Aplikacje komputerowe</figcaption>
               </figure>
             </li>
-            <li class="grid__item--col-3">
+            <li class="grid__item-service">
               <figure class="service">
                 <img
                   class="service__image"
@@ -181,7 +174,7 @@
                 <figcaption class="service__heading">Aplikacje mobilne</figcaption>
               </figure>
             </li>
-            <li class="grid__item--col-3">
+            <li class="grid__item-service">
               <figure class="service">
                 <img class="service__image" src="images/img3.jpg" alt="Dlonie obslugujace tablet" />
                 <figcaption class="service__heading">Rozwiązania graficzne</figcaption>
@@ -195,7 +188,7 @@
         <div class="section__container">
           <h2 class="section__heading">Nasz zespół</h2>
           <ul class="grid">
-            <li class="grid__item--col-4">
+            <li class="grid__item-team">
               <article class="team">
                 <img
                   class="team__image"
@@ -252,7 +245,7 @@
                 </div>
               </article>
             </li>
-            <li class="grid__item--col-4">
+            <li class="grid__item-team">
               <article class="team">
                 <img
                   class="team__image"
@@ -309,7 +302,7 @@
                 </div>
               </article>
             </li>
-            <li class="grid__item--col-4">
+            <li class="grid__item-team">
               <article class="team">
                 <img
                   class="team__image"
@@ -366,7 +359,7 @@
                 </div>
               </article>
             </li>
-            <li class="grid__item--col-4">
+            <li class="grid__item-team">
               <article class="team">
                 <img
                   class="team__image"
@@ -431,82 +424,58 @@
         <div class="section__container">
           <h2 class="section__heading">Nasi klienci</h2>
           <ul class="grid">
-            <li class="grid__item--col-6">
+            <li class="grid__item-client">
               <a class="link" href="#">
-                <svg class="client-icon" width="170" height="92">
-                  <use
-                    href="./images/icons.svg#icon-logo1"
-                    width="106"
-                    height="64"
-                    x="32px"
-                    y="13"
-                  ></use>
-                </svg>
+                <div class="client">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#icon-logo1"></use>
+                  </svg>
+                </div>
               </a>
             </li>
-            <li class="grid__item--col-6">
+            <li class="grid__item-client">
               <a class="link" href="#">
-                <svg class="client-icon" width="170" height="92">
-                  <use
-                    href="./images/icons.svg#icon-logo2"
-                    width="106"
-                    height="64"
-                    x="32px"
-                    y="13"
-                  ></use>
-                </svg>
+                <div class="client">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#icon-logo2"></use>
+                  </svg>
+                </div>
               </a>
             </li>
-            <li class="grid__item--col-6">
+            <li class="grid__item-client">
               <a class="link" href="#">
-                <svg class="client-icon" width="170" height="92">
-                  <use
-                    href="./images/icons.svg#icon-logo3"
-                    width="106"
-                    height="64"
-                    x="32px"
-                    y="13"
-                  ></use>
-                </svg>
+                <div class="client">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#icon-logo3"></use>
+                  </svg>
+                </div>
               </a>
             </li>
-            <li class="grid__item--col-6">
+            <li class="grid__item-client">
               <a class="link" href="#">
-                <svg class="client-icon" width="170" height="92">
-                  <use
-                    href="./images/icons.svg#icon-logo4"
-                    width="106"
-                    height="64"
-                    x="32px"
-                    y="13"
-                  ></use>
-                </svg>
+                <div class="client">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#icon-logo4"></use>
+                  </svg>
+                </div>
               </a>
             </li>
-            <li class="grid__item--col-6">
+            <li class="grid__item-client">
               <a class="link" href="#">
-                <svg class="client-icon" width="170" height="92">
-                  <use
-                    href="./images/icons.svg#icon-logo5"
-                    width="106"
-                    height="64"
-                    x="32px"
-                    y="13"
-                  ></use>
-                </svg>
+                <div class="client">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#icon-logo5"></use>
+                  </svg>
+                </div>
               </a>
             </li>
-            <li class="grid__item--col-6">
+            <li class="grid__item-client">
               <a class="link" href="#">
-                <svg class="client-icon" width="170" height="92">
-                  <use
-                    href="./images/icons.svg#icon-logo6"
-                    width="106"
-                    height="64"
-                    x="32px"
-                    y="13"
-                  ></use>
-                </svg>
+                <div class="client">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#icon-logo6"></use>
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -516,66 +485,68 @@
     <!-- Page footer -->
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__address">
-          <!-- Logo is always a link -->
-          <a class="logo--light" href="./index.html">
-            <span class="logo__accent"> Web</span>Studio
-          </a>
-          <!-- Address -->
-          <address class="address">
-            <p class="address__text">m. Warszawa, Aleje Jerozolimskie 21</p>
-            <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            <a class="address__link" href="tel:+48111111111">+48 111 111 111</a>
-          </address>
-        </div>
-        <!-- Social links -->
-        <div class="social-icons">
-          <h3 class="social-icons__heading">Dołącz do nas</h3>
-          <div class="icon-container">
-            <a class="link" href="#">
-              <svg class="social-icon--dark" width="44" height="44">
-                <use
-                  href="./images/icons.svg#icon-instagram"
-                  width="20"
-                  height="20"
-                  x="12"
-                  y="12"
-                ></use>
-              </svg>
+        <div class="footer__tablet-container">
+          <div class="footer__address">
+            <!-- Logo is always a link -->
+            <a class="logo--light" href="./index.html">
+              <span class="logo__accent"> Web</span>Studio
             </a>
-            <a class="link" href="#">
-              <svg class="social-icon--dark" width="44" height="44">
-                <use
-                  href="./images/icons.svg#icon-twitter"
-                  width="20"
-                  height="20"
-                  x="12"
-                  y="12"
-                ></use>
-              </svg>
-            </a>
-            <a class="link" href="#">
-              <svg class="social-icon--dark" width="44" height="44">
-                <use
-                  href="./images/icons.svg#icon-facebook"
-                  width="20"
-                  height="20"
-                  x="12"
-                  y="12"
-                ></use>
-              </svg>
-            </a>
-            <a class="link" href="#">
-              <svg class="social-icon--dark" width="44" height="44">
-                <use
-                  href="./images/icons.svg#icon-linkedin"
-                  width="20"
-                  height="20"
-                  x="12"
-                  y="12"
-                ></use>
-              </svg>
-            </a>
+            <!-- Address -->
+            <address class="address">
+              <p class="address__text">m. Warszawa, Aleje Jerozolimskie 21</p>
+              <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a class="address__link" href="tel:+48111111111">+48 111 111 111</a>
+            </address>
+          </div>
+          <!-- Social links -->
+          <div class="social-icons">
+            <h3 class="social-icons__heading">Dołącz do nas</h3>
+            <div class="icon-container">
+              <a class="link" href="#">
+                <svg class="social-icon--dark" width="44" height="44">
+                  <use
+                    href="./images/icons.svg#icon-instagram"
+                    width="20"
+                    height="20"
+                    x="12"
+                    y="12"
+                  ></use>
+                </svg>
+              </a>
+              <a class="link" href="#">
+                <svg class="social-icon--dark" width="44" height="44">
+                  <use
+                    href="./images/icons.svg#icon-twitter"
+                    width="20"
+                    height="20"
+                    x="12"
+                    y="12"
+                  ></use>
+                </svg>
+              </a>
+              <a class="link" href="#">
+                <svg class="social-icon--dark" width="44" height="44">
+                  <use
+                    href="./images/icons.svg#icon-facebook"
+                    width="20"
+                    height="20"
+                    x="12"
+                    y="12"
+                  ></use>
+                </svg>
+              </a>
+              <a class="link" href="#">
+                <svg class="social-icon--dark" width="44" height="44">
+                  <use
+                    href="./images/icons.svg#icon-linkedin"
+                    width="20"
+                    height="20"
+                    x="12"
+                    y="12"
+                  ></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <!-- Newsletter form -->
@@ -648,7 +619,8 @@
               value="agreed"
             />
             <span class="checkbox__label">
-              Oświadczam iż akceptuję <a href="#" class="checkbox__link">Regulamin</a> i
+              Oświadczam iż akceptuję
+              <a href="#" class="checkbox__link"> Regulamin</a> i
               <a href="#" class="checkbox__link">Politykę Prywatności</a>.
             </span>
           </label>
@@ -656,7 +628,62 @@
         </form>
       </div>
     </div>
-    <!-- Script -->
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-close" width="18" height="18" x="11" y="11"></use>
+        </svg>
+      </button>
+      <!-- Mobile navigation -->
+      <nav class="mobile-navigation">
+        <div class="mobile-navigation__container">
+          <ul class="mobile-navigation__list">
+            <li class="mobile-navigation__item">
+              <a class="mobile-navigation__link--active" href="./index.html"> Agencja </a>
+            </li>
+            <li class="mobile-navigation__item">
+              <a class="mobile-navigation__link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="mobile-navigation__item">
+              <a class="mobile-navigation__link" href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Mobile contact links -->
+      <ul class="mobile-contacts">
+        <li class="mobile-contacts__item">
+          <a class="mobile-contacts__phone" href="tel:+48111111111"> +48 111 111 111 </a>
+        </li>
+        <li class="mobile-contacts__item">
+          <a class="mobile-contacts__mail" href="mailto:info@devstudio.com"> info@devstudio.com </a>
+        </li>
+      </ul>
+      <!-- Mobile social links -->
+      <ul class="mobile-social">
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">Instagram</a>
+        </li>
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">Twitter</a>
+        </li>
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">Facebook</a>
+        </li>
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Scripts -->
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
