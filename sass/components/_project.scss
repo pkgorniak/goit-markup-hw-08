@@ -11,7 +11,7 @@
 
   &__overlay {
     @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: null, $gap: null);
-    padding: 20px;
+    padding: 49px 24px;
     position: absolute;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@
     height: 100%;
     background: var.getColor('background-overlay');
     @include var.fontStyle(
-      $size: 16px,
+      $size: 18px,
       $height: 1.556,
       $spacing: 0.03em,
       $weight: 400,
@@ -32,8 +32,6 @@
 
   &__image {
     object-fit: contain;
-    height: 100%;
-    width: 100%;
   }
 
   &__text-container {
@@ -70,11 +68,11 @@
   transform: translateY(0);
 }
 
-@media (min-width: 400px) {
+@media (max-width: 399px) {
   .project {
     &__overlay {
-      padding: 49px 24px;
-      font-size: 18px;
+      padding: 20px;
+      font-size: 16px;
     }
   }
 }

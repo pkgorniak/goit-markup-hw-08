@@ -31,7 +31,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .contacts {
     @include var.flexBox($direction: column, $justify: null, $align: null, $wrap: null, $gap: null);
 
@@ -46,7 +46,6 @@
     @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: null, $gap: null);
 
     &__item:not(:last-child) {
-      margin-bottom: 0;
       margin-right: 30px;
     }
   }

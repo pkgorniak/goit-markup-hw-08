@@ -4,7 +4,7 @@
 .banner {
   background-color: var.getColor('background-dark');
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/background.jpg);
+    url('../images/background.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;
@@ -23,7 +23,7 @@
 
   &__heading {
     @include var.fontStyle(
-      $size: 20px,
+      $size: 26px,
       $height: 1.615,
       $spacing: 0.06em,
       $weight: 900,
@@ -36,11 +36,19 @@
   }
 }
 
-@media (min-width: 400px) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .banner {
+    background-image: url('../images/background@2x.jpg');
+  }
+}
+
+@media (max-width: 399px) {
   .banner {
     &__heading {
-      font-size: 26px;
-      line-height: 1.615;
+      font-size: 20px;
     }
   }
 }

@@ -2,7 +2,13 @@
 
 .checkbox {
   position: relative;
-  @include var.flexBox($direction: row, $justify: center, $align: center, $wrap: null, $gap: null);
+  @include var.flexBox(
+    $direction: row,
+    $justify: flex-start,
+    $align: center,
+    $wrap: null,
+    $gap: null
+  );
   margin-bottom: 30px;
 
   &__label {
@@ -42,8 +48,10 @@
   &__icon {
     fill: var.getColor('background-modal');
     position: absolute;
+    transform-origin: center;
     left: 0px;
-    top: 6px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
     cursor: pointer;
   }
@@ -60,25 +68,11 @@
   }
 }
 
-@media (min-width: 480px) {
-  .checkbox {
-    &__icon {
-      left: 3px;
-      top: 0px;
-    }
-  }
-}
-
 @media (min-width: 1200px) {
   .checkbox {
     &__label {
       font-size: 14px;
       line-height: 1.714;
-    }
-
-    &__icon {
-      left: 14px;
-      top: 4px;
     }
   }
 }

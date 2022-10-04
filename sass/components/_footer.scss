@@ -74,13 +74,7 @@
     }
 
     &__address {
-      @include var.flexBox(
-        $direction: column,
-        $justify: null,
-        $align: flex-start,
-        $wrap: null,
-        $gap: null
-      );
+      align-items: flex-start;
     }
   }
 }

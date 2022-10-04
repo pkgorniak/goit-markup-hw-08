@@ -8,6 +8,6 @@
 
 @media (min-width: 768px) {
   .filter {
-    @include var.flexBox($direction: row, $justify: center, $align: null, $wrap: wrap, $gap: 8px);
+    justify-content: center;
   }
 }

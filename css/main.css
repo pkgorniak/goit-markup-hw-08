@@ -11,6 +11,8 @@ body {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 :focus {
@@ -345,19 +347,9 @@ img {
 
 @media (min-width: 768px) {
   .filter {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 8px;
   }
 }
 .logo, .logo--light, .logo--dark {
@@ -658,7 +650,7 @@ img {
   fill: rgb(33, 150, 243);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .contacts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -683,14 +675,13 @@ img {
             flex-direction: row;
   }
   .contacts__item:not(:last-child) {
-    margin-bottom: 0;
     margin-right: 30px;
   }
 }
 .banner {
   background-color: rgb(47, 48, 58);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/background.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;
@@ -709,7 +700,7 @@ img {
           align-items: center;
 }
 .banner__heading {
-  font-size: 20px;
+  font-size: 26px;
   line-height: 1.615;
   letter-spacing: 0.06em;
   font-weight: 900;
@@ -719,10 +710,14 @@ img {
   margin-bottom: 30px;
 }
 
-@media (min-width: 400px) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .banner {
+    background-image: url("../images/background@2x.jpg");
+  }
+}
+@media (max-width: 399px) {
   .banner__heading {
-    font-size: 26px;
-    line-height: 1.615;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -788,8 +783,6 @@ img {
 .service__image {
   -o-object-fit: contain;
      object-fit: contain;
-  height: 100%;
-  width: 100%;
 }
 .service__heading {
   display: -webkit-box;
@@ -838,8 +831,6 @@ img {
 .team__image {
   -o-object-fit: contain;
      object-fit: contain;
-  height: 100%;
-  width: 100%;
 }
 .team__heading {
   font-size: 16px;
@@ -925,14 +916,14 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 20px;
+  padding: 49px 24px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.556;
   letter-spacing: 0.03em;
   font-weight: 400;
@@ -951,8 +942,6 @@ img {
 .project__image {
   -o-object-fit: contain;
      object-fit: contain;
-  height: 100%;
-  width: 100%;
 }
 .project__text-container {
   padding: 20px 24px;
@@ -986,10 +975,10 @@ img {
           transform: translateY(0);
 }
 
-@media (min-width: 400px) {
+@media (max-width: 399px) {
   .project__overlay {
-    padding: 49px 24px;
-    font-size: 18px;
+    padding: 20px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -1086,13 +1075,6 @@ img {
     gap: 70px;
   }
   .footer__address {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1127,33 +1109,28 @@ img {
 
 @media (min-width: 1200px) {
   .address {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 9px;
   }
 }
 .newsletter-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .newsletter-form__heading {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.03em;
@@ -1163,13 +1140,13 @@ img {
   margin-bottom: 20px;
 }
 .newsletter-form__input {
-  width: 100%;
-  max-width: 450px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   font-weight: 400;
-  margin-bottom: 20px;
   color: rgb(255, 255, 255);
   padding: 14px 15px;
   background: transparent;
@@ -1186,33 +1163,28 @@ img {
   border: 1px solid rgb(33, 150, 243);
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1199px) {
   .newsletter-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: auto;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-  .newsletter-form__heading {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
   }
   .newsletter-form__input {
-    width: auto;
-    max-width: auto;
-    margin-bottom: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .newsletter-form__input {
     margin-right: 12px;
   }
 }
@@ -1244,12 +1216,12 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 300px;
+  width: 450px;
   background-color: rgb(255, 255, 255);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px 30px;
+  padding: 40px;
 }
 .modal__button {
   position: absolute;
@@ -1265,16 +1237,15 @@ img {
           transform: scale(3);
 }
 
-@media (min-width: 480px) {
+@media (max-width: 479px) {
   .modal {
-    width: 450px;
-    padding: 40px;
+    width: 300px;
+    padding: 40px 30px;
   }
 }
 @media (min-width: 1200px) {
   .modal {
     width: 528px;
-    padding: 40px;
   }
 }
 .order-form {
@@ -1310,6 +1281,7 @@ img {
   color: rgb(117, 117, 117);
 }
 .order-form__input {
+  height: 40px;
   padding: 12px 12px 12px 42px;
   margin-top: 4px;
   margin-bottom: 10px;
@@ -1353,6 +1325,11 @@ img {
   margin: 0 auto;
 }
 
+@media (max-width: 479px) {
+  .order-form__textarea {
+    height: 65px;
+  }
+}
 .checkbox {
   position: relative;
   display: -webkit-box;
@@ -1362,9 +1339,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1412,8 +1389,12 @@ img {
 .checkbox__icon {
   fill: rgb(255, 255, 255);
   position: absolute;
+  -webkit-transform-origin: center;
+          transform-origin: center;
   left: 0px;
-  top: 6px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 2;
   cursor: pointer;
 }
@@ -1433,19 +1414,9 @@ img {
   text-decoration: none;
 }
 
-@media (min-width: 480px) {
-  .checkbox__icon {
-    left: 3px;
-    top: 0px;
-  }
-}
 @media (min-width: 1200px) {
   .checkbox__label {
     font-size: 14px;
     line-height: 1.714;
-  }
-  .checkbox__icon {
-    left: 14px;
-    top: 4px;
   }
 }/*# sourceMappingURL=main.css.map */
